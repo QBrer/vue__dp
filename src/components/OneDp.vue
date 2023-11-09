@@ -44,6 +44,7 @@ export default {
         },
     },
     methods: {
+        //引入高德地图
         initAMap() {
             AMapLoader.load({
                 key: "4fb78ce9b563f39d2e668e2b8156bf40",
@@ -52,11 +53,10 @@ export default {
             })
                 .then((AMap) => {
                     this.map = new AMap.Map("container", {
-                        viewMode: "3D",
                         zoom: 11,
                         center: [116.397428, 39.90923],
                     });
-
+                    //原数据加载及绘制
                     let paths = [];
                     axios.get('../../1.json').then((res) => {
                         let path = res.data;
@@ -79,7 +79,7 @@ export default {
                         });
                         this.map.add(polyline);
                     });
-
+                    //压缩后数据加载及绘制
                     let pathsdp = [];
                     axios.get('../../1.json').then((res) => {
                         let path = res.data;

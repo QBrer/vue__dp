@@ -8,7 +8,6 @@
 </template>
 <script>
 export default {
-//方法定义
   methods: {
   goTo(route) {
     if (this.$route.path !== route) {
