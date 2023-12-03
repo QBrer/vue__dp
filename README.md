@@ -1,4 +1,3 @@
-轨迹压缩dp算法呈现
 # vuepoint
 
 ## Project setup
